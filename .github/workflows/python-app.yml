@@ -40,6 +40,7 @@ jobs:
         author_name: Daniel Weisser
         author_email: daniel.weisser@gmail.com
         message: 'Update CSV data'
+        add: 'daten.csv'
     - name: Commit new images
       uses: EndBug/add-and-commit@v7
       with:
