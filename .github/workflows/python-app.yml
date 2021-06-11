@@ -41,6 +41,9 @@ jobs:
         author_email: daniel.weisser@gmail.com
         message: 'Update CSV data'
         add: 'daten.csv'
+    - uses: actions/checkout@v2
+      with:
+        ref: gh-pages
     - name: Commit new images
       uses: EndBug/add-and-commit@v7
       with:
