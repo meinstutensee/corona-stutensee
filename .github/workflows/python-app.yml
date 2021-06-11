@@ -34,3 +34,9 @@ jobs:
     - name: Run script
       run: |
         python stutensee-corona.py
+    - name: Commit changes
+      uses: EndBug/add-and-commit@v7
+      with:
+        author_name: Daniel Weisser
+        author_email: daniel.weisser@gmail.com
+        message: 'Update CSV data'
