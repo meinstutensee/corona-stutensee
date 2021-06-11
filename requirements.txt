@@ -1,5 +1,5 @@
 requests
 pandas
-tabula
+tabula-py
 matplotlib
 bs4
