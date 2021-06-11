@@ -39,7 +39,7 @@ df['7-Tage Inzidenz'] = df['Gesamtzahl'].diff(periods=7) / 25052 * 100000
 
 # Write image
 ax = df.plot.line(x='Datum', y='Infiziert')
-df.plot.line(x='Datum', y='Neue Infektionen', ax=ax)
-df.plot.line(x='Datum', y='7-Tage Inzidenz')
+df.plot.line(x='Datum', y='Neue Infektionen', ax=ax).get_figure().savefig('infektionen.png')
+df.plot.line(x='Datum', y='7-Tage Inzidenz').get_figure().savefig('inzidenz.png')
 
-plt.show()
+# plt.show()
