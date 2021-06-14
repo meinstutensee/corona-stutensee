@@ -41,10 +41,16 @@ jobs:
         author_email: daniel.weisser@gmail.com
         message: 'Update CSV data'
         add: 'daten.csv'
-    - name: Commit new images
+    - name: Add new images
       run: |
-        git status
         git add *.png
         git fetch
         git checkout gh-pages
-        git status
+    - name: Commit new images
+      uses: EndBug/add-and-commit@v7
+      with:
+        author_name: Daniel Weisser
+        author_email: daniel.weisser@gmail.com
+        message: 'Update images'
+        branch: gh-pages
+        add: '*.png'
