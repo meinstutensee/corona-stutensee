@@ -44,9 +44,7 @@ jobs:
     - name: Commit new images
       run: |
         git status
-        git stash 
-        git stash list
+        git add *.png
+        git fetch
         git checkout gh-pages
-        git pull origin gh-pages
-        git stash list
-        git stash apply
+        git status
