@@ -43,7 +43,10 @@ jobs:
         add: 'daten.csv'
     - name: Commit new images
       run: |
+        git status
         git stash push
+        git status
         git checkout gh-pages
+        git status
         git stash pop
-        git ls
+        git status
