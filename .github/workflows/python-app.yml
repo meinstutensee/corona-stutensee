@@ -50,7 +50,7 @@ jobs:
         git stash
         git fetch
         git checkout gh-pages
-        git stash apply
+        git checkout stash -- .
     - name: Commit new images
       uses: EndBug/add-and-commit@v7
       with:
