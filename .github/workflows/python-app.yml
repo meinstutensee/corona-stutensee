@@ -45,6 +45,7 @@ jobs:
         add: 'daten.csv'
     - name: Add new images
       run: |
+        git status
         git stash
         git fetch
         git checkout gh-pages
