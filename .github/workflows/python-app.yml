@@ -46,6 +46,7 @@ jobs:
     - name: Add new images
       run: |
         git status
+        git add *.png
         git stash
         git fetch
         git checkout gh-pages
