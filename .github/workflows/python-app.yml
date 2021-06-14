@@ -45,9 +45,10 @@ jobs:
         add: 'daten.csv'
     - name: Add new images
       run: |
-        git add *.png
+        git stash
         git fetch
         git checkout gh-pages
+        git stash apply
     - name: Commit new images
       uses: EndBug/add-and-commit@v7
       with:
