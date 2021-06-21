@@ -1,4 +1,3 @@
-# Aktuelle Corona Zahlen von Stutensee
 
 ## Historie der Infektionen
 
