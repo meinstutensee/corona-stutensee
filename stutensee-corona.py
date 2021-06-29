@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import tabula
 from bs4 import BeautifulSoup
 from datetime import datetime
+from pathlib import Path
 
 # Load CSV
 df = pd.read_csv('daten.csv')
@@ -39,6 +40,13 @@ df['7-Tage Inzidenz'] = df['Gesamtzahl'].diff(periods=7) / 25052 * 100000
 ax = df.plot.line(x='Datum', y='Infiziert')
 df.plot.line(x='Datum', y='Neue Infektionen', ax=ax).get_figure().savefig('infektionen.png')
 df.plot.line(x='Datum', y='7-Tage Inzidenz').get_figure().savefig('inzidenz.png')
+
+# Write 7-day-incidence
+seven_day = round(df.iloc[-1]["7-Tage Inzidenz"], 1)
+Path("_includes").mkdir(parents=True, exist_ok=True) 
+incidenceFile = open('_includes/aktuelle_inzidenz.md', 'w')
+print(str(seven_day).replace(".", ","), file = incidenceFile)
+incidenceFile.close()
 
 # Show images
 # plt.show()

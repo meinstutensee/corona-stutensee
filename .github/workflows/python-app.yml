@@ -46,11 +46,11 @@ jobs:
     - name: Add new images
       run: |
         git status
-        git add *.png
+        git add *.png _includes/aktuelle_inzidenz.md
         git stash
         git fetch
         git checkout gh-pages
-        git checkout stash -- *.png
+        git checkout stash -- *.png _includes/aktuelle_inzidenz.md
     - name: Commit new images
       uses: EndBug/add-and-commit@v7
       with:
@@ -58,4 +58,4 @@ jobs:
         author_email: daniel.weisser@gmail.com
         message: 'Update images'
         branch: gh-pages
-        add: '*.png'
+        add: '*.png _includes/aktuelle_inzidenz.md'
