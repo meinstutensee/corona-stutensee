@@ -4,7 +4,7 @@
 
 ## Aktuelle Daten
 
-Die aktuelle Inzidenz ({%- post.date | date: date_format -%}) liegt bei {% include_relative aktuelle_inzidenz.md %}
+Die aktuelle Inzidenz liegt bei {% include_relative aktuelle_inzidenz.md %}
 
 ## Historie der Infektionen
 
