@@ -43,9 +43,9 @@ df.plot.line(x='Datum', y='7-Tage Inzidenz').get_figure().savefig('inzidenz.png'
 
 # Write 7-day-incidence
 seven_day = round(df.iloc[-1]["7-Tage Inzidenz"], 1)
-Path("_includes").mkdir(parents=True, exist_ok=True) 
+Path("_includes").mkdir(parents=True, exist_ok=True)
 incidenceFile = open('_includes/aktuelle_inzidenz.md', 'w')
-print(str(seven_day).replace(".", ","), file = incidenceFile)
+print(str(seven_day).replace(".", ","), file=incidenceFile, end='')
 incidenceFile.close()
 
 # Show images
