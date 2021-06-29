@@ -2,6 +2,3 @@ theme: jekyll-theme-cayman
 title: Corona Zahlen für Stutensee
 description: Aktuelle Zahlen und Historie für die Kreisstadt Stutensee.
 google_analytics: UA-53042412-2
-url: "https://weisserd.github.io"
-plugins:
-  - jekyll-sitemap
