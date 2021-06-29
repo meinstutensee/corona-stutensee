@@ -4,7 +4,7 @@
 
 ## Aktuelle Daten
 
-Die aktuelle Inzidenz vom {{ "now" | date: "%d.%m.%Y" }} liegt bei {% include aktuelle_inzidenz.md %}
+Die aktuelle 7-Tage-Inzidenz vom **{{ "now" | date: "%d.%m.%Y" }}** liegt bei **{% include aktuelle_inzidenz.md %}**.
 
 ## Historie der Infektionen
 
