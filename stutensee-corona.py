@@ -5,8 +5,6 @@ import tabula
 from bs4 import BeautifulSoup
 from datetime import datetime
 
-# Run this script once a day
-
 # Load CSV
 df = pd.read_csv('daten.csv')
 df['Datum'] = df['Datum'].apply(pd.to_datetime)
@@ -42,4 +40,5 @@ ax = df.plot.line(x='Datum', y='Infiziert')
 df.plot.line(x='Datum', y='Neue Infektionen', ax=ax).get_figure().savefig('infektionen.png')
 df.plot.line(x='Datum', y='7-Tage Inzidenz').get_figure().savefig('inzidenz.png')
 
+# Show images
 # plt.show()
