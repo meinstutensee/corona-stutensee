@@ -22,4 +22,4 @@ Das Diagram zeigt den Verlauf der Gesamtzahl der 7-Tage-Inzidenz in Stutensee.
 
 ## Erklärung
 
-Die Daten stammen von der Seite [https://corona.karlsruhe.de/aktuelle-fallzahlen](https://corona.karlsruhe.de/aktuelle-fallzahlen). Sie werden jeden Vormittag um 9:30 aktualisiert und auf dieser Basis die aktuelle 7-Tage-Inzidenz berechnet.
+Die Daten stammen von der Seite [https://corona.karlsruhe.de/aktuelle-fallzahlen](https://corona.karlsruhe.de/aktuelle-fallzahlen). Sie werden jeden Vormittag aktualisiert und auf dieser Basis die aktuelle 7-Tage-Inzidenz berechnet.
