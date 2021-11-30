@@ -1,6 +1,5 @@
 import pandas as pd
 import requests
-import matplotlib.pyplot as plt
 import tabula
 from bs4 import BeautifulSoup
 from datetime import datetime
@@ -47,6 +46,3 @@ Path("_includes").mkdir(parents=True, exist_ok=True)
 incidenceFile = open('_includes/aktuelle_inzidenz.md', 'w')
 print(str(seven_day).replace(".", ","), file=incidenceFile, end='')
 incidenceFile.close()
-
-# Show images
-# plt.show()
