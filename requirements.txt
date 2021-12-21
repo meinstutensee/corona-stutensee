@@ -3,3 +3,6 @@ pandas
 tabula-py
 matplotlib
 bs4
+flake8 
+pytest
+# prophet
