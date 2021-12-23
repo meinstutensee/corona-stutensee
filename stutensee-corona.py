@@ -4,6 +4,8 @@ import tabula
 from bs4 import BeautifulSoup
 from datetime import datetime
 from pathlib import Path
+from prophet import Prophet
+
 
 # Load CSV
 df = pd.read_csv('daten.csv')
@@ -40,6 +42,18 @@ df['7-Tage Inzidenz'] = df['Gesamtzahl'].diff(periods=7) / 25052 * 100000
 ax = df.plot.line(x='Datum', y='Infiziert')
 df.plot.line(x='Datum', y='Neue Infektionen', ax=ax).get_figure().savefig('infektionen.png')
 df.plot.line(x='Datum', y='7-Tage Inzidenz').get_figure().savefig('inzidenz.png')
+
+# Prediction
+m = Prophet()
+df2 = df.rename(columns={'Datum': 'ds', 'Gesamtzahl': 'y'})
+m.fit(df2)
+future = m.make_future_dataframe(periods=90)
+forecast = m.predict(future)
+
+# see https://towardsdatascience.com/simplified-forecasting-with-facebook-prophet-d5789d32acdf
+print(forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail(50))
+m.plot(forecast).savefig('future.png')
+m.plot_components(forecast).savefig('future2.png')
 
 # Write 7-day-incidence
 seven_day = round(df.iloc[-1]["7-Tage Inzidenz"], 1)
