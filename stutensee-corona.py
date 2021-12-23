@@ -17,6 +17,7 @@ if last_update[0] > df.iloc[-1]['Datum']:
     print("Need new data.")
     # Get PDF and load it
     pdfUrl = soup.find('a', href=True, text='Fallzahlen in tabellarischer Form (PDF Download)')['href']
+    print("Trying to download: " + pdfUrl)
     t = tabula.read_pdf(pdfUrl, pages=1)
     # Parse data
     df = df.append({'Datum': last_update[0],
